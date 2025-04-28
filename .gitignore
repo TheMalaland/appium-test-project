@@ -1,2 +1,3 @@
 node_modules
 chrome/*.apk
+chromedriver-win64/*.exe
