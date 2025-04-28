@@ -1,43 +1,32 @@
 {
     "compilerOptions": {
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es2022",
-        "lib": [
-            "es2022",
-            "dom"
-        ],
+        "moduleResolution": "node",          // Resuelve módulos al estilo Node.js
+        "module": "commonjs",                // Usa CommonJS para la compatibilidad con Node.js
+        "target": "es2022",                  // Genera código compatible con ES2022
+        "lib": ["es2022", "dom"],            // Incluye APIs modernas de ES2022 y DOM
         "types": [
-            "node",
-            "@wdio/globals/types",
-            "expect-webdriverio",
-            "@wdio/mocha-framework",
-            "@wdio/appium-service",
-            "@wdio/visual-service",
-            "wdio-vite-service",
-            "wdio-nuxt-service",
-            "@wdio/firefox-profile-service",
-            "wdio-gmail-service",
-            "@wdio/sauce-service",
-            "@wdio/testingbot-service",
-            "@wdio/browserstack-service",
-            "@wdio/lighthouse-service",
-            "wdio-vscode-service",
-            "wdio-electron-service",
-            "wdio-roku-service"
+            "node",                          // Tipos para Node.js
+            "@wdio/globals/types",           // Tipos globales de WebdriverIO
+            "expect-webdriverio",            // Tipos para las aserciones de WebdriverIO
+            "@wdio/mocha-framework",         // Tipos para Mocha
+            "@wdio/appium-service"           // Tipos para el servicio de Appium
         ],
-        "skipLibCheck": true,
-        "noEmit": true,
-        "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "skipLibCheck": true,                // Omite la comprobación de tipos en archivos de definición
+        "noEmit": true,                      // No genera archivos `.js` al compilar
+        "allowImportingTsExtensions": true,  // Permite importar archivos `.ts` directamente
+        "resolveJsonModule": true,           // Permite importar archivos JSON
+        "isolatedModules": true,             // Asegura que cada archivo sea tratado como un módulo independiente
+        "strict": true,                      // Activa todas las comprobaciones estrictas
+        "noUnusedLocals": true,              // Marca variables locales no usadas como error
+        "noUnusedParameters": true,          // Marca parámetros no usados como error
+        "noFallthroughCasesInSwitch": true   // Evita que los casos en `switch` caigan al siguiente sin `break`
     },
     "include": [
-        "test",
-        "wdio.conf.ts"
+        "test",                              // Incluye todos los archivos en la carpeta `test`
+        "wdio.conf.ts"                       // Incluye el archivo de configuración de WebdriverIO
+    ],
+    "exclude": [
+        "node_modules",                      // Excluye la carpeta `node_modules`
+        "dist"                               // Excluye la carpeta de salida (si existe)
     ]
 }

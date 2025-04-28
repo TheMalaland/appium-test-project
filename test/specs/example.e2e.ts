@@ -1,4 +1,4 @@
-const { expect } = require('chai');
+import { expect } from 'chai';
 
 describe('App Test', () => {
     it('should open Play Store, search for "metalslug", and return to the home screen', async () => {
@@ -8,29 +8,37 @@ describe('App Test', () => {
             await openPlayStore();
             await searchInPlayStore('metalslug');
         } catch (error) {
-            console.error('Error durante la ejecución:', error.message);
+            console.error('Error durante la ejecución:', (error as Error).message);
         }
     });
 });
 
 // Función para cambiar al contexto nativo
-async function switchToNativeContext() {
+async function switchToNativeContext(): Promise<void> {
     console.log('Obteniendo contextos disponibles...');
     const contexts = await browser.getContexts(); // Obtener todos los contextos disponibles
-    console.log('Available contexts:', contexts); // Imprimir los contextos disponibles
+    console.log('Available contexts:', contexts);
+
+    // Convertir los contextos a cadenas para verificar si "NATIVE_APP" está disponible
+    const contextNames = contexts.map((context) => String(context));
+
+    if (!contextNames.includes('NATIVE_APP')) {
+        throw new Error('El contexto NATIVE_APP no está disponible.');
+    }
+
     await browser.switchContext('NATIVE_APP'); // Cambiar al contexto nativo
     console.log('Contexto cambiado a NATIVE_APP.');
 }
 
 // Función para presionar el botón de inicio
-async function pressHomeButton() {
+async function pressHomeButton(): Promise<void> {
     console.log('Presionando el botón de inicio...');
     await driver.pressKeyCode(3); // Código 3 corresponde al botón de inicio (HOME)
     console.log('Botón de inicio presionado.');
 }
 
 // Función para abrir la Play Store
-async function openPlayStore() {
+async function openPlayStore(): Promise<void> {
     console.log('Esperando a que el ícono de Play Store esté visible...');
     const playStoreIcon = await $('android=new UiSelector().description("Play Store")'); // Cambia "Play Store" si el texto es diferente
     await playStoreIcon.waitForDisplayed({ timeout: 5000 });
@@ -41,7 +49,7 @@ async function openPlayStore() {
 }
 
 // Función para buscar una app en la Play Store
-async function searchInPlayStore(query) {
+async function searchInPlayStore(query: string): Promise<void> {
     console.log('Buscando el campo de búsqueda...');
     const searchFeature = await $('android=new UiSelector().text("Search")');
     await searchFeature.waitForDisplayed({ timeout: 5000 });
