@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Play Store Test HomePage games" timestamp="2025-04-29T17:33:41" time="5.089" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Play Store Test - HomePage(games)"/>
+      <property name="capabilities" value="android.emulator-5554"/>
+      <property name="file" value="file:///C:/Users/TheMalaland/Documents/appium-test-project/test/specs/playstore.game.ts"/>
+    </properties>
+    <testcase classname="android.emulator-5554.Play_Store_Test_-_HomePage(games)" name="should open the Play Store" time="1.585">
+      <system-out><![CDATA[
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-0166-ffff-ffff0000019a/displayed - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-0166-ffff-ffff0000019a/displayed - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-0166-ffff-ffff0000019a/click - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Play Store\")"}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.emulator-5554.Play_Store_Test_-_HomePage(games)" name="The notifications icon should be visible clickable" time="0.768">
+      <system-out><![CDATA[
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Show notifications and offers.\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Show notifications and offers.\")"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-3fa40000002b/displayed - {}
+RESULT: {}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-3fa40000002b/displayed - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-3fa40000002b/click - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.emulator-5554.Play_Store_Test_-_HomePage(games)" name="verify the notifications page is displayed" time="0.802">
+      <system-out><![CDATA[
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().text(\"You're all caught up\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().text(\"You're all caught up\")"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-465d0000002b/displayed - {}
+RESULT: {}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-465d0000002b/text - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().description(\"Navigate up\")"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().description(\"Navigate up\")"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-464d0000002b/displayed - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-0000-464d0000002b/click - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.emulator-5554.Play_Store_Test_-_HomePage(games)" name="the user button should be visible clickable" time="0.154">
+      <system-out><![CDATA[
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element - {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.android.vending:id/0_resource_name_obfuscated\").instance(3)"}
+RESULT: {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.android.vending:id/0_resource_name_obfuscated\").instance(3)"}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-ffff-ffff0000002a/displayed - {}
+RESULT: {}
+COMMAND: GET /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-ffff-ffff0000002a/displayed - {}
+RESULT: {}
+COMMAND: POST /session/ccadf319-0657-4069-bbe2-ccf636a212d5/element/00000000-0000-015f-ffff-ffff0000002a/click - {}
+RESULT: {}
+COMMAND: DELETE /session/ccadf319-0657-4069-bbe2-ccf636a212d5 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

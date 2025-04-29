@@ -76,4 +76,5 @@ async function searchInPlayStore(query: string): Promise<void> {
     console.log('Presionando enter para buscar...');
     await driver.pressKeyCode(66); // Código 66 corresponde a la tecla Enter
     console.log('Búsqueda realizada.');
+    
 }

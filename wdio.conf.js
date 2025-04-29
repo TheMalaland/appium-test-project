@@ -22,7 +22,7 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-       './test/specs/contextchange.ts'
+       './test/specs/playstore.game.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -54,7 +54,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         browserName: '',
-        'appium:deviceName': 'Pixel 4 new',
+        'appium:deviceName': 'Pixel 7 pro',
         'appium:platformVersion': '16.0',
         'appium:automationName': 'UiAutomator2'
         //'appium:chromedriverAutodownload': false, // Habilita la descarga automática de Chromedriver
@@ -131,7 +131,20 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: './allure-results', // Carpeta donde se guardarán los resultados
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
+        }],
+        ['junit', {
+            outputDir: './junit-results', // Carpeta donde se guardarán los reportes
+            outputFileFormat: function (options) { // Nombre del archivo de salida
+                return `results-${options.cid}.xml`;
+            },
+        }],
+    ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

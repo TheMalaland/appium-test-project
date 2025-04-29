@@ -38,3 +38,12 @@ This project contains automated tests for mobile applications using **Appium** a
     npx wdio run wdio.conf.ts
 
 5. npm install --save-dev @wdio/cli @wdio/local-runner @wdio/mocha-framework @wdio/spec-reporter @wdio/appium-service ts-node typescript
+
+6. to run   npx wdio run wdio.conf.ts
+
+
+7. For Generating and seeing the reports
+
+npx allure generate ./allure-results --clean -o ./allure-report
+
+npx allure open ./allure-report
