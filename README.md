@@ -33,3 +33,8 @@ This project contains automated tests for mobile applications using **Appium** a
     Project Structure
     test/specs/: Contains the test scripts.
     wdio.conf.js: WebdriverIO configuration file.
+
+4. to run
+    npx wdio run wdio.conf.ts
+
+5. npm install --save-dev @wdio/cli @wdio/local-runner @wdio/mocha-framework @wdio/spec-reporter @wdio/appium-service ts-node typescript
